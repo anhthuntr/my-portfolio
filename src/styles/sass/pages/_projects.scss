@@ -1,0 +1,89 @@
+#projects {
+  .project-container {
+    padding: 2rem;
+    margin-right: 10rem;
+  }
+
+  .wrapper {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .wrapper:hover .card {
+    opacity: 0.5; /* Darker cards */
+  }
+  .card:hover {
+    opacity: 1 !important;
+  }
+  .card {
+    font-family: "Work Sans", sans-serif;
+    flex: 1 1 100px;
+    box-sizing: border-box;
+    margin: 0.25rem 0.25em;
+    background: #4a525b;
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .card a:hover {
+    box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+  }
+
+  .card-content {
+    padding: 1.4em;
+  }
+
+  .card-content h3 {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    font-weight: bold;
+
+    &:after {
+        display: block;
+        content: "/";
+        font-size: 80%;
+        font-weight: 400;
+    }
+  }
+
+  .card-content p {
+    font-size: 90%;
+  }
+
+  .tech {
+    margin-top: 1rem;
+    color: $light-grey;
+    opacity: 0.5;
+    }   
+
+  .centered {
+    margin: 0 auto;
+    padding: 0 1em;
+    text-align: left;
+  }
+
+
+  @media screen and (min-width: 52em) {
+    .centered {
+      max-width: 60%;
+    }
+  }
+
+  @media (max-width: 578px) {
+    .wrapper {
+      margin: 0 auto;
+      gap: 0.5rem;
+    }
+  }
+}

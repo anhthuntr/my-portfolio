@@ -1,0 +1,22 @@
+$breakpoints: (
+    "xs": 0,
+    "sm": 480px,
+    "md": 720px,
+    "lg": 960px,
+    "xl": 1200px,
+    "xxl": 1440px
+);
+
+@mixin breakpoint($bp: 0) {
+    @media (min-width: map-get($breakpoints, $bp)) {
+        @content
+    }
+};
+
+@mixin responsive-font-size($sizes) {
+    @each $bp, $size in $sizes {
+        @include breakpoint($bp) {
+            font-size: $size;
+        }
+    }
+};
