@@ -14,7 +14,7 @@ provider:
 
   environment:
     EMAIL_USER: ${env:EMAIL_USER}
-    EMAIL_PASS: ${env:EMAIL_USER}
+    EMAIL_PASS: ${env:EMAIL_PASS}
     CLIENT_URL: ${env:VITE_CLIENT_URL}
     SERVER_URL: ${env:VITE_SERVER_URL}
 
