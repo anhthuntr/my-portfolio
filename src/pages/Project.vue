@@ -13,7 +13,7 @@
           data-aos-delay="300"
         >
           <article class="card">
-            <a href="#">
+            <a href="https://github.com/anhthuntr/my-portfolio" target="_blank">
               <div class="card-content">
                 <h3>personal website</h3>
                 <p>my brief and simple portfolio</p>
@@ -57,7 +57,7 @@
           <article class="card">
             <a href="https://github.com/anhthuntr/firebase-react-expenseTracker" target="_blank">
               <div class="card-content">
-                <h3>Expense Tracker</h3>
+                <h3>expense tracker</h3>
                 <p>Tracking expenses</p>
                 <p class="tech">JavaScript, React, Firebase</p>
               </div>
