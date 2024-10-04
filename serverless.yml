@@ -1,0 +1,39 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: primadonna
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: email-service
+service: contact-service
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+
+  deploymentBucket:
+    name: thu-serverless
+
+  environment:
+    EMAIL_USER: ${env:EMAIL_USER}
+    EMAIL_PASS: ${env:EMAIL_USER}
+    CLIENT_URL: ${env:VITE_CLIENT_URL}
+    SERVER_URL: ${env:VITE_SERVER_URL}
+
+functions:
+  app:
+    handler: server.handler
+    events:
+      - http:
+          path: /
+          method: post
+
+
+
+plugins:
+  - serverless-dotenv-plugin
+
+package:
+  include:
+    - server.js
+    - node_modules/**
+  exclude:
+    - .git/**

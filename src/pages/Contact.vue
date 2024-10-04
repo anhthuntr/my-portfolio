@@ -73,7 +73,7 @@ export default {
   methods: {
     async sendEmail() {
       try {
-        const response = await fetch(`${process.env.SERVER_URL}/`, {
+        const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -99,6 +99,7 @@ export default {
     },
   },
 };
+//console.log('Server URL:', import.meta.env.VITE_SERVER_URL);
 </script>
   <style lang="scss">
 </style>
