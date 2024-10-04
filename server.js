@@ -13,7 +13,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 
 //middleware
-app.use(cors({ origin: `${process.env.CLIENT_URL}` }));
+app.use(cors());
 app.use(bodyParser.json());
 
 // nodemailer setup
@@ -26,6 +26,13 @@ const transporter = nodemailer.createTransport({
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
     }
+});
+
+app.options('*', (req, res) => {
+    res.header('Access-Control-Allow-Origin', process.env.VITE_CLIENT_URL);
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    res.sendStatus(200);
 });
 
 app.post('/', (req, res) => {
@@ -45,7 +52,7 @@ app.post('/', (req, res) => {
     });
 });
 
-// app.listen(PORT, () => {
-//     console.log(`Server is running on http://localhost:${PORT}`);
-//   });
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+  });
 export const handler = serverless(app);
