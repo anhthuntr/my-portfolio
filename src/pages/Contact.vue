@@ -102,7 +102,7 @@ export default {
     },
   },
 };
-console.log('Server URL:', import.meta.env.VITE_SERVER_URL);
+//console.log('Server URL:', import.meta.env.VITE_SERVER_URL);
 </script>
   <style lang="scss">
 </style>
