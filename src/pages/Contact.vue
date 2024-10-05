@@ -73,7 +73,7 @@ export default {
   methods: {
     async sendEmail() {
       try {
-        const response = await fetch('https://m36qr54oh2.execute-api.us-east-1.amazonaws.com/prod/', {
+        const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -89,6 +89,9 @@ export default {
           throw new Error("Network response was not ok");
         }
         this.showMessage = true;
+        setTimeout(() => {
+          this.showMessage = false;
+        }, 5000)
         this.name = "";
         this.email = "";
         this.message = "";
