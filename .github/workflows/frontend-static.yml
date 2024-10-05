@@ -38,6 +38,15 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
+      - name: Save environment variables
+        # Save the variables into the .env.production file
+        run: |
+          touch .env.production
+          echo "VITE_SERVER_URL=${{ secrets.VITE_SERVER_URL }}" >> .env.production
+      - name: Test environment variables
+        # Test if the variables were being stored
+        run: |
+          cat .env.production
       - name: Build
         run: npm run build -- --mode production
       - name: Setup Pages

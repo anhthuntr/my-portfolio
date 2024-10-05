@@ -12,8 +12,4 @@ export default defineConfig({
     }),
   ],
   base: "/",
-  define: {
-    "process.env": process.env,
-    ENV_KEY: process.env.VITE_SERVER_URL,
-  }
 });

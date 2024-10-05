@@ -73,7 +73,7 @@ export default {
   methods: {
     async sendEmail() {
       try {
-        const response = await fetch(`${import.meta.env.ENV_KEY}/`, {
+        const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
