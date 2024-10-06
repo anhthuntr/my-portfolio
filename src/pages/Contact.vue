@@ -49,11 +49,11 @@
         <div class="eml">
           <h3><span class="line">OR</span></h3>
           <a
-            href="mailto:anhthu.ntr@gmail.com"
+            href="mailto:info@anhthuntr.com"
             style="font-size: 16px"
           >
             <span style="margin-right: 10px" class="fa fa-paper-plane"></span>
-            Email me at anhthu.ntr@gmail.com
+            Email me at info@anhthuntr.com
           </a>
         </div>
       </div>

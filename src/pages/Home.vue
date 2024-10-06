@@ -1,7 +1,7 @@
 <template>
   <section id="home" class="homepage">
     <div class="title fade-target">
-      <h2>&lt;Thu A. <span class="line">Nguyen /&gt;</span></h2>
+      <h2><a href="https://www.anhthuntr.com/">&lt;Thu A. <span class="line">Nguyen /&gt;</span></a></h2>
     </div>
     <div class="container">
       <div class="icn fade-target">

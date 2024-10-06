@@ -3,6 +3,12 @@
   justify-content: flex-end;
   padding: 1rem;
   margin-right: 3rem;
+  
+  a {
+    text-decoration: none;
+    color: $light-color;
+  }
+
   @include breakpoint("xs") {
     margin-right: 0rem;
   }
@@ -192,24 +198,24 @@
   .vertical-text {
     font-size: 0.8rem;
     transform: rotate(90deg);
+    @include responsive-font-size(( "xs": 0.6rem, "md": 0.7rem, "lg": 0.8rem ));
   }
 
   .arrow {
     transform: translateX(-10px) translateY(25px) rotate(90deg);
   }
 
-    // Responsive adjustments
-    @include breakpoint("xs") {
-      top: 9vh; // Adjusted for smaller screens
-    }
-  
-    @include breakpoint("md") {
-      top: 10vh; // Fine-tuned for medium screens
-    }
-  
-    @include breakpoint("lg") {
-      top: 11vh; // Original position for larger screens
-    }
+  @include breakpoint("xs") {
+    top: 9vh;
+  }
+
+  @include breakpoint("md") {
+    top: 10vh;
+  }
+
+  @include breakpoint("lg") {
+    top: 11vh;
+  }
 }
 
 .text,
